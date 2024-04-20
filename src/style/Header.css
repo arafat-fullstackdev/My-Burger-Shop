@@ -1,0 +1,90 @@
+header .navbar{
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+}
+header .navbar.sticky{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--white);
+    -webkit-transition: all 15ms ease-in-out;
+    -moz-transition: all 15ms ease-in-out;
+    -o-transition: all 15ms ease-in-out;
+    -ms-transition:all 15ms ease-in-out;
+    transition: all 15ms ease-in-out;
+    animation-name:stickyTransition;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-fill-mode: both;
+    -webkit-box-shadow:0 2px 3px rgba(96, 96, 96, 0.1);
+    -moz-box-shadow:0 2px 3px rgba(96, 96, 96, 0.1);
+    box-shadow: 0 2px 3px rgba(96, 96, 96, 0.1);
+}
+
+@keyframes stickyTransition {
+    0%{
+        opacity: 0;
+        -webkit-transform: translate3d(1,-100%, 0);
+        transform: translate3d(1,-100%, 0);
+    }
+    100%{
+        opacity: 0;
+        -webkit-transform: none;
+        transform: none;
+    }
+    
+}
+
+header .logo img{
+  width: auto;
+  max-width: inherit;
+  max-height: 80px;
+}
+
+header .nav-link{
+    display: inline-flex;
+    justify-content: center;
+    color: var(--light-black);
+    font-family: var(--oswald-font);
+    font-weight: 500;
+    padding: 0 1rem !important;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    -webkit-transition: all 15ms ease-in-out;
+    -moz-transition: all 15ms ease-in-out;
+    -o-transition: all 15ms ease-in-out;
+    -ms-transition:all 15ms ease-in-out;
+    transition: all 15ms ease-in-out;
+}
+
+header .sticky .nav-link{
+    color: var(--light-black);
+}
+
+header .nav-link:hover{
+    color: var(--yellow);
+}
+
+/* card */
+header .card{
+    position: relative;
+    top: -0.4375rem;
+}
+
+header .roundPoint{
+    width: 16px;
+    height: 16px;
+    background: var(--light-red);
+    color: var(--light-black);
+    border-radius: 50%;
+    font-size: 11.2px;
+    line-height: 16px;
+    text-align: center;
+    font-style: normal;
+    position: absolute;
+    top: 3.2px;
+    right: -8px;
+}
